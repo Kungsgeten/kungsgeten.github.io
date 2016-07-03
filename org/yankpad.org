@@ -1,6 +1,6 @@
-#+OPTIONS: html-fancy:t
 #+TITLE:Yankpad
 #+SUBTITLE:Insert Emacs text snippets from org-mode
+#+DATE:2016-07-02
 
 #+BEGIN_section
 _Text expansion in Emacs_ can be done in several different ways[fn:2]. I'm most familiar with [[http://joaotavora.github.io/yasnippet/][YASnippet]], but one thing I missed from it was having /different sets/ of text snippets for /different situations/. YASnippet organizes snippets by major-mode; you have one set for Python programming, another for =org-mode= etc.
