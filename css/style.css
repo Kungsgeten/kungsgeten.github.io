@@ -50,18 +50,21 @@ a {
 a:hover {
   background-color: #d3d3a8;
 }
-#content {
+#content,
+#postamble {
   margin: auto;
   margin-bottom: 1.5em;
   padding: 0 0.5em;
 }
 @media screen and (min-width: 460px) {
-  #content {
+  #content,
+  #postamble {
     padding: 0 2em;
   }
 }
 @media screen and (min-width: 530px) {
-  #content {
+  #content,
+  #postamble {
     max-width: 560px;
   }
 }
