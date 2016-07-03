@@ -1,0 +1,78 @@
+#+OPTIONS: html-fancy:t
+#+TITLE:Yankpad
+#+SUBTITLE:Insert Emacs text snippets from org-mode
+
+#+BEGIN_section
+_Text expansion in Emacs_ can be done in several different ways[fn:2]. I'm most familiar with [[http://joaotavora.github.io/yasnippet/][YASnippet]], but one thing I missed from it was having /different sets/ of text snippets for /different situations/. YASnippet organizes snippets by major-mode; you have one set for Python programming, another for =org-mode= etc.
+
+In my work as as a teacher I work with different courses, and I thought it would be nice to have a different set of active snippets depending on which course I'm working on[fn:3]. The same is true for other purposes, like different programming projects. Another thing I never quite got the hang of in YASnippet was that each snippet lives in its own file. I really like the overview you get when using different levels of headings in =org-mode=, and thought that would be an easier way of organizing snippets. Said and done; I started developing Yankpad.
+#+END_section
+
+#+BEGIN_section
+_Yankpad is an Emacs package_ for text expansion, where an org-mode file (the /yankpad/) contains all of the snippets. This yankpad organizes snippets in /categories/, where by default each level one heading is a category and each level two sub-heading is a snippet within that category. The yankpad might look something like this:
+
+#+BEGIN_EXAMPLE
+  ,* Introduction to Game Design and Prototyping
+
+  ,** Assignment description
+
+     Please read the assignment description, where additional information is
+     provided.
+
+  ,** Clarification
+
+     You need to clarify $1. At the moment I can not understand what you mean.$0
+
+  ,** Grade mail
+
+     Hi `(work-student-name-from-heading)`,
+
+     Here's your grade and feedback from the written assignment in Introduction to
+     Game Design and Prototyping. Feel free to e-mail me with any questions.
+
+  ,* blog
+  ,** Section
+     ,#+BEGIN_section
+     $0
+     ,#+END_section
+  ,** Article
+     ,#+BEGIN_article
+     $0
+     ,#+END_article
+
+  ,* python-mode
+  ,** for                                      :f:
+     for $1 in $2:
+         $3
+     $0
+  ,** main                                     :m:
+     if __name__ == '__main__':
+         $0
+#+END_EXAMPLE
+
+In the file above we have three categories. The first one --- /Introduction to Game Design and Prototyping/ --- contains three snippets[fn:1]. In order to activate snippets from this category you would use =M-x yankpad-set-category=. If you're familiar with YASnippet you may notice that the syntax of =$n= for tab stops and =`(backticks)`= for executing elisp is the same as in YASnippet. That's because /Yankpad uses YASnippet/ when expanding snippets, if YASnippet installed (otherwise the text will be inserted as is). YASnippet is very powerful, so why reinvent the wheel?
+
+The second /blog/ category is an example of naming the category after a certain project; in this case this blog! If you're using [[https://github.com/bbatsov/projectile][Projectile]] and have defined your project there, this category will automatically be activated when switching to the /blog/ project[fn:4]. Projectile isn't a requirement for Yankpad to work, it is just an extra feature.
+
+The third category is named /python-mode/, and will be activated when =python-mode= is the major-mode of a buffer. Another interesting thing is the /tags/ which I've applied to the snippets. You can have several tags, but the /last tag/ will be interpreted as a /key binding/ and will be inserted into =yankpad-map=; a prefix map. I have this map bound to _F7_, so by pressing =<f7> f= while the python-mode category is active, the for loop snippet is inserted.
+#+END_section
+
+#+BEGIN_section
+_Yankpad is on Melpa_ and I would really like your feedback on it. You can also checkout the [[http://github.com/Kungsgeten/yankpad][GitHub repository]]. The yankpad file will by default be named =yankpad.org= inside your =org-directory=, but that could be changed by setting the =yankpad-file= variable. In order to insert a snippet, use =M-x yankpad-insert= or bind it to a key. The =yankpad-map= has no key-binding by default, so you have to set it yourself:
+
+#+BEGIN_EXAMPLE
+  (define-key 'global-map (kbd "<f7>") #'yankpad-map)
+#+END_EXAMPLE
+
+I'm hoping you'll enjoy Yankpad!
+#+END_section
+
+* Footnotes
+
+[fn:4] This will only change the category for these buffers though, the /global category/ for other buffers will still be the one specified with the last =yankpad-set-category= call.
+
+[fn:3] I'm usually using =org-mode= when grading assignments, but I do not want YASnippet grading templates when working in other org-mode files. Really I do not actually want them at all except when grading that specific course.
+
+[fn:2] [[http://joaotavora.github.io/yasnippet/][YASnippet]], [[https://www.emacswiki.org/emacs/SkeletonMode][Skeleton]], [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Abbrevs.html][Abbrev]], [[https://www.emacswiki.org/emacs/AutoInsertMode][Auto Insert]]...
+
+[fn:1] "Assignment description", "Clarification", and "Grade mail".

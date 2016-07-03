@@ -1,0 +1,18 @@
+#+TITLE:Kungsgeten
+#+DATE:2016-05-21
+
+#+BEGIN_section
+_My name is Erik Sjöstrand[fn:2]_ and I work as a game design and programming teacher at the [[http://his.se/en/][University of Skövde]], Sweden. This is my personal blog, where I will blog about my interests: games, game development, music, programming and contract bridge.
+
+In my spare time I sing and play [[http://www.manndolins.com/][electric mandolin]] in the punk rock band [[http://idyllen.bandcamp.com/][Idyllen]]. I'm also the president of /Skövde Bridgeallians/; the local bridge club where I live. I enjoy programming, mostly in /Python/ and /Emacs Lisp/. Please checkout the bridge bidding practice site [[http://www.correctcontract.com][Correct Contract]], or my other projects at [[http://github.com/kungsgeten][GitHub]].
+#+END_section
+
+#+BEGIN_section
+_This blog is created_ with Emacs using the amazing [[http://orgmode.org][org-mode]]. Most of the text is set in [[https://www.google.com/fonts/specimen/Alegreya][Alegreya]] --- except for code snippets and other =monospace= text, which is set in [[https://www.google.com/fonts/specimen/Cousine][Cousine]]. Much of the typography --- the use of sidenotes and sections separated by whitespace, starting the sentence with _small caps_ --- is inspired by Edward Tufte's work.
+#+END_section
+
+* Footnotes
+
+[fn:2]
+#+CAPTION: Me playing with Idyllen in 2014
+[[file:img/erik.jpg]]
