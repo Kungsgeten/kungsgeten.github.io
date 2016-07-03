@@ -1,0 +1,11 @@
+#+HTML_HEAD_EXTRA: <link rel='stylesheet' type='text/css' href='css/style.css'>
+#+HTML_HEAD_EXTRA: <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
+#+HTML_HEAD_EXTRA: <script src='js/blog.js'></script>
+#+OPTIONS: toc:nil num:nil html-postamble:nil html-preamble:my-blog-header
+
+* Emacs
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blogcategory
+:END:
+
+- [2016-07-03 Sun] [[file:yankpad.html][Yankpad]] -- /Text snippets using org-mode/

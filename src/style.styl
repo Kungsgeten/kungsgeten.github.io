@@ -43,7 +43,21 @@ h4
 h2.footnotes
   font-family "Alegreya SC"
   font-size 100%
+  border-bottom none
   border-top 2px solid grey
+
+.blogcategory
+  h2
+    border-bottom 2px solid lighten(fontcolor, 80%)
+    margin-bottom 0.5em
+  ul
+    list-style-type none
+    padding-left 0
+    margin-left 2.5em
+    text-indent -2.5em
+
+.timestamp
+  color lighten(fontcolor, 60%)
 
 header
   margin 10px
@@ -114,15 +128,6 @@ th
   border-bottom 2px solid
   border-top 2px solid
 
-// h2
-//   border-bottom 2px solid grey
-
-// h3
-//    margin 0.5em 0
-
-// h4
-//   margin 0.4em 0
-
 .underline
   font-family: "Alegreya SC", sans-serif
   text-transform lowercase
@@ -144,6 +149,8 @@ th
 #head
   margin auto
   font-family "Alegreya SC", sans-serif
+  a
+    text-decoration none
   @media screen and (min-width: medium)
     max-width big
   >h1

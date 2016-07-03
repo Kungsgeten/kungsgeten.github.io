@@ -68,6 +68,10 @@ I'm hoping you'll enjoy Yankpad!
 #+END_section
 
 * Footnotes
+:PROPERTIES:
+:ID:       3ccd6ca5-99de-4126-acb0-bdfb8049a528
+:PUBDATE:  <2016-07-03 Sun 16:10>
+:END:
 
 [fn:4] This will only change the category for these buffers though, the /global category/ for other buffers will still be the one specified with the last =yankpad-set-category= call.
 

@@ -1,5 +1,10 @@
+#+HTML_HEAD_EXTRA: <link rel='stylesheet' type='text/css' href='css/style.css'>
+#+HTML_HEAD_EXTRA: <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
+#+HTML_HEAD_EXTRA: <script src='js/blog.js'></script>
+#+OPTIONS: toc:nil num:nil html-postamble:nil html-preamble:my-blog-header
+
 #+TITLE:Kungsgeten
-#+DATE:2016-05-21
+#+DATE:2016-05-21q
 
 #+BEGIN_section
 _My name is Erik Sjöstrand[fn:2]_ and I work as a game design and programming teacher at the [[http://his.se/en/][University of Skövde]], Sweden. This is my personal blog, where I will blog about my interests: games, game development, music, programming and contract bridge.

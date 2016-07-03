@@ -34,7 +34,21 @@ h4 {
 h2.footnotes {
   font-family: "Alegreya SC";
   font-size: 100%;
+  border-bottom: none;
   border-top: 2px solid #808080;
+}
+.blogcategory h2 {
+  border-bottom: 2px solid #d7d7cd;
+  margin-bottom: 0.5em;
+}
+.blogcategory ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 2.5em;
+  text-indent: -2.5em;
+}
+.timestamp {
+  color: #b0b09a;
 }
 header {
   margin: 10px;
@@ -137,6 +151,9 @@ th {
 #head {
   margin: auto;
   font-family: "Alegreya SC", sans-serif;
+}
+#head a {
+  text-decoration: none;
 }
 @media screen and (min-width: 530px) {
   #head {
