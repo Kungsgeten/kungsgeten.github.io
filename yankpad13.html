@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 2016-08-15 Mon 16:27 -->
+<!-- 2016-08-15 Mon 16:31 -->
 <meta  charset="utf-8">
 <meta  name="viewport" content="width=device-width, initial-scale=1">
-<title></title>
+<title>Yankpad 1.3</title>
 <meta  name="generator" content="Org-mode">
 <meta  name="author" content="Erik Sjöstrand">
 <style type="text/css">
@@ -154,16 +154,77 @@ for the JavaScript code in this tag.
 </div>
 </div>
 <div id="content">
+<header>
+<h1 class="title">Yankpad 1.3</h1>
+<p class="subtitle">Keywords and function calls</p>
+</header><section>
+<p>
+<span class="underline">Yankpad has some new features</span> since my <a href="yankpad.html">last post</a> about it. One thing that I missed from YASnippet was the ability to write a keyword into a buffer, press a key, and a specific snippet bound to that keyword would insert itself<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>. This can now be done with Yankpad by writing a snippet named something like <code>keyword: Snippet name</code>, and then the command <code>yankpad-expand</code> can be used to replace the keyword with the snippet.
+</p>
 
-<div id="outline-container-orgheadline1" class="outline-2 blogcategory">
-<h2 id="orgheadline1">Emacs</h2>
-<div class="outline-text-2" id="text-orgheadline1">
-<ul class="org-ul">
-<li><span class="timestamp-wrapper"><span class="timestamp">[2016-08-15 Mon] </span></span> <a href="yankpad13.html">Yankpad 1.3</a> &#x2013; <i>Keywords and function calls</i></li>
-<li><span class="timestamp-wrapper"><span class="timestamp">[2016-07-03 Sun] </span></span> <a href="yankpad.html">Yankpad</a> &#x2013; <i>Text snippets using org-mode</i></li>
-</ul>
+<p>
+The other new feature is the ability to use Yankpad in order to <i>trigger functions</i><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>. You can either name a snippet into an emacs-lisp function, which will then be triggered when &ldquo;inserting&rdquo; the snippet, or you can have an org-mode source block inside the snippet and the source block code will be executed when inserting the snippet. To use this functionality you put the tag <code>func</code> into the snippet title. For now no text is inserted into the buffer when using a <i>function snippet</i>, but I&rsquo;m thinking about adding some functionality so that the result block of org-mode source blocks are added. So far I haven&rsquo;t used the function snippets myself very much, perhaps you have some ideas?
+</p>
+</section>
+
+<section>
+<p>
+<span class="underline">Here&rsquo;s an example</span> of how you can use the new features:
+</p>
+
+<pre class="example">
+* Blog
+** section: Insert a new section
+
+   #+BEGIN_section
+   _$1_ $0
+   #+END_section
+
+** Copy images      :func:
+
+   #+BEGIN_SRC emacs-lisp
+     (copy-directory "~/blog/org/images" "blog/published/images")
+   #+END_SRC
+</pre>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+In YASnippet this is done by specifying a keyword, by putting <code># key: keyword</code> in the heading of the snippet file.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+Say that you have a shell script to copy files between different folders, specific for your current project, for instance.
+</p></div></div>
+
+
 </div>
-</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//kungsgeten.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 </body>
 </html>
