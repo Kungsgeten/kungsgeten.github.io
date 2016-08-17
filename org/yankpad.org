@@ -56,7 +56,7 @@ In the file above we have three categories. The first one --- /Introduction to G
 
 The second /blog/ category is an example of naming the category after a certain project; in this case this blog! If you're using [[https://github.com/bbatsov/projectile][Projectile]] and have defined your project there, this category will automatically be activated when switching to the /blog/ project[fn:4]. Projectile isn't a requirement for Yankpad to work, it is just an extra feature.
 
-The third category is named /python-mode/, and will be activated when =python-mode= is the major-mode of a buffer. Another interesting thing is the /tags/ which I've applied to the snippets. You can have several tags, but the /last tag/ will be interpreted as a /key binding/ and will be inserted into =yankpad-map=; a prefix map. I have this map bound to _F7_, so by pressing =<f7> f= while the python-mode category is active, the for loop snippet is inserted.
+The third category is named /python-mode/, and will be activated when =python-mode= is the major-mode of a buffer. Another interesting thing is the /tags/ which I've applied to the snippets. You can have several tags, but the /last tag/ will be interpreted as a /key binding/ and will be inserted into =yankpad-map=; a prefix map[fn:5]. I have this map bound to _F7_, so by pressing =<f7> f= while the python-mode category is active, the for loop snippet is inserted.
 #+END_section
 
 #+BEGIN_section
@@ -70,10 +70,8 @@ I'm hoping you'll enjoy Yankpad!
 #+END_section
 
 * Footnotes
-:PROPERTIES:
-:ID:       3ccd6ca5-99de-4126-acb0-bdfb8049a528
-:PUBDATE:  <2016-07-03 Sun 16:10>
-:END:
+
+[fn:5] _Edit_: Since writing this, =yankpad-map= is no longer a prefix-map, but a regular function. It is still used the same way though.
 
 [fn:4] This will only change the category for these buffers though, the /global category/ for other buffers will still be the one specified with the last =yankpad-set-category= call.
 

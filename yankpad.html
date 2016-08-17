@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 2016-08-15 Mon 16:31 -->
+<!-- 2016-08-17 Wed 14:23 -->
 <meta  charset="utf-8">
 <meta  name="viewport" content="width=device-width, initial-scale=1">
 <title>Yankpad</title>
@@ -224,7 +224,7 @@ The second <i>blog</i> category is an example of naming the category after a cer
 </p>
 
 <p>
-The third category is named <i>python-mode</i>, and will be activated when <code>python-mode</code> is the major-mode of a buffer. Another interesting thing is the <i>tags</i> which I&rsquo;ve applied to the snippets. You can have several tags, but the <i>last tag</i> will be interpreted as a <i>key binding</i> and will be inserted into <code>yankpad-map</code>; a prefix map. I have this map bound to <span class="underline">F7</span>, so by pressing <code>&lt;f7&gt; f</code> while the python-mode category is active, the for loop snippet is inserted.
+The third category is named <i>python-mode</i>, and will be activated when <code>python-mode</code> is the major-mode of a buffer. Another interesting thing is the <i>tags</i> which I&rsquo;ve applied to the snippets. You can have several tags, but the <i>last tag</i> will be interpreted as a <i>key binding</i> and will be inserted into <code>yankpad-map</code>; a prefix map<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>. I have this map bound to <span class="underline">F7</span>, so by pressing <code>&lt;f7&gt; f</code> while the python-mode category is active, the for loop snippet is inserted.
 </p>
 </section>
 
@@ -259,6 +259,10 @@ I&rsquo;m usually using <code>org-mode</code> when grading assignments, but I do
 
 <div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
 This will only change the category for these buffers though, the <i>global category</i> for other buffers will still be the one specified with the last <code>yankpad-set-category</code> call.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5">5</a></sup> <div class="footpara"><p class="footpara">
+<span class="underline">Edit</span>: Since writing this, <code>yankpad-map</code> is no longer a prefix-map, but a regular function. It is still used the same way though.
 </p></div></div>
 
 
