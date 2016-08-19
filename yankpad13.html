@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 2016-08-15 Mon 16:47 -->
+<!-- 2016-08-19 Fri 11:58 -->
 <meta  charset="utf-8">
 <meta  name="viewport" content="width=device-width, initial-scale=1">
 <title>Yankpad 1.3</title>
@@ -157,13 +157,17 @@ for the JavaScript code in this tag.
 <header>
 <h1 class="title">Yankpad 1.3</h1>
 <p class="subtitle">Keywords and function calls</p>
-</header><section>
+</header><p>
+<i>Edit: Added description of <code>results</code> tag.</i>
+</p>
+
+<section>
 <p>
 <span class="underline">Yankpad has some new features</span> since my <a href="yankpad.html">last post</a> about it. One thing that I missed from YASnippet was the ability to write a keyword into a buffer, press a key, and a specific snippet bound to that keyword would insert itself<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>. This can now be done with Yankpad by writing a snippet named something like <code>keyword: Snippet name</code>, and then the command <code>yankpad-expand</code> can be used to replace the keyword with the snippet.
 </p>
 
 <p>
-The other new feature is the ability to use Yankpad in order to <i>trigger functions</i><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>. You can either name a snippet into an emacs-lisp function, which will then be triggered when &ldquo;inserting&rdquo; the snippet, or you can have an org-mode source block inside the snippet and the source block code will be executed when inserting the snippet. To use this functionality you put the tag <code>func</code> into the snippet title. For now no text is inserted into the buffer when using a <i>function snippet</i>, but I&rsquo;m thinking about adding some functionality so that the result block of org-mode source blocks are added. So far I haven&rsquo;t used the function snippets myself very much, perhaps you have some ideas?
+The other new feature is the ability to use Yankpad in order to <i>trigger functions</i><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>. You can either name a snippet into an emacs-lisp function, which will then be triggered when &ldquo;inserting&rdquo; the snippet, or you can have an org-mode source block inside the snippet and the source block code will be executed when inserting the snippet. To use this functionality you put the tag <code>func</code> into the snippet title. The <code>func</code> tag does not insert any text into the buffer, it just triggers the function for side effects. If you want to insert the output as text, use the <code>results</code> tag instead.
 </p>
 </section>
 
@@ -192,6 +196,12 @@ The other new feature is the ability to use Yankpad in order to <i>trigger funct
 
    #+BEGIN_SRC emacs-lisp
      (copy-directory "~/blog/org/images" "~/blog/published/images")
+   #+END_SRC
+
+** Insert number of blogposts    :results:
+
+   #+BEGIN_SRC emacs-lisp
+     (length (directory-files "~/blog/org" nil "\\.org"))
    #+END_SRC
 </pre>
 </section>
