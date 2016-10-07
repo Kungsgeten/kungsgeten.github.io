@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 2016-10-07 Fri 12:03 -->
+<meta  charset="utf-8">
+<meta  name="viewport" content="width=device-width, initial-scale=1">
+<title>RYO</title>
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Erik Sjöstrand">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel='stylesheet' type='text/css' href='css/style.css'>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
+<script src='js/blog.js'></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<div id="head">
+    <h1>Kungsgeten &mdash; </h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="static_about.html">About</a></li>
+    </ul>
+</div>
+</div>
+<div id="content">
+<header>
+<h1 class="title">RYO</h1>
+<p class="subtitle">Roll your own modal mode!</p>
+</header><section>
+<p>
+<span class="underline">Modal text editing</span> is a concept where the text editor can be in different states. Vi wrote the book on this, and Vim took it further. In Vim there&rsquo;s a <i>normal mode</i> where key presses manipulate text, or navigate the text document. To insert new text you&rsquo;d have to enter the <i>insert mode</i>. Then there&rsquo;s a <i>visual mode</i> when you&rsquo;re marking text etc. The benefits of modal editing (compared to <i>modeless</i> editing) is supposed to be faster and more ergonomic text editing.
+</p>
+
+<p>
+Emacs is by default a <i>modeless</i> editor, but there are several packages<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> which implement modal ways of editing. Most of these come with predefined keybindings and a certain philosophy of how things should be done. An exception is <a href="https://github.com/mrkkrp/modalka">Modalka</a>; a package which uses a modal minor mode, and lets the user bind keys to this mode. You&rsquo;d use <code>(modalka-define-kbd "e" "C-e")</code> to bind <code>e</code> to do what <code>C-e</code> normally does. You could also use <code>(define-key modalka-mode-map (kbd "e") #'end-of-line)</code> if you&rsquo;d want to bind a key to a command instead of the key simulating another keypress. Emacs is <i>very</i> configurable at its core, and I believe it is a good thing having a framework for defining your own modal editing environment &#x2013; if that&rsquo;s a thing you want, or like to try out.
+</p>
+</section>
+
+<section>
+<p>
+<span class="underline">I started working on RYO</span> because there was a few things I wanted to do, which were a bit cumbersome in Modalka. Like Modalka, <span class="underline">RYO</span> doesn&rsquo;t define any default keybindings, but compared to Modalka&rsquo;s <code>modalka-define-kbd</code>, there are more options in <span class="underline">RYO</span>. For instance in Vim there are several commands in <i>normal mode</i> which navigates/modifies text and then puts you into <i>insert mode</i>. An example is <code>c w</code><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> which deletes the word you&rsquo;re at, and puts you into <i>insert mode</i>. Since Emacs by default is <i>modeless</i> there&rsquo;s no function to do this, so you&rsquo;d have to write it yourself:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span style="color: #8c8c8c;">(</span><span style="color: #8197bf;">defun</span> <span style="color: #fad07a;">kill-word-then-insert-mode</span> <span style="color: #93a8c6;">(</span>arg<span style="color: #93a8c6;">)</span>
+  <span style="color: #99ad6a;">"Kill ARG words at point, then exit `</span><span style="color: #99ad6a;">modalka-mode</span><span style="color: #99ad6a;">'."</span>
+  <span style="color: #93a8c6;">(</span>interactive <span style="color: #99ad6a;">"p"</span><span style="color: #93a8c6;">)</span>
+  <span style="color: #93a8c6;">(</span>kill-word arg<span style="color: #93a8c6;">)</span>
+  <span style="color: #93a8c6;">(</span>modalka-mode -1<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+
+<span style="color: #8c8c8c;">(</span>define-key modalka-mode-map <span style="color: #93a8c6;">(</span>kbd <span style="color: #99ad6a;">"c w"</span><span style="color: #93a8c6;">)</span> #'kill-word-then-insert-mode<span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<p>
+If you have a lot of bindings like this, there&rsquo;s many functions to write. What if we could just bind the key to a function, and at the same time specify that we should enter <i>insert mode</i> afterwards?<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup> <span class="underline">RYO</span> provides this functionality, and then some!
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span style="color: #8c8c8c;">(</span>ryo-modal-key <span style="color: #99ad6a;">"c w"</span> #'kill-word <span style="color: #8fbfdc;">:exit</span> t<span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+</section>
+
+<section>
+<p>
+<span class="underline">I love <a href="https://github.com/jwiegley/use-package">use-package</a></span> and its <code>bind-keys</code> functionality: You can bind several keybindings at once with one command. To me this makes it easier to organize and navigate your configuration code. <span class="underline">RYO</span> provides this too, via <code>ryo-modal-keys</code>:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span style="color: #8c8c8c;">(</span>ryo-modal-keys
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"h"</span> backward-char<span style="color: #93a8c6;">)</span>
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"j"</span> next-line<span style="color: #93a8c6;">)</span>
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"k"</span> previous-line<span style="color: #93a8c6;">)</span>
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"l"</span> forward-char<span style="color: #93a8c6;">)</span>
+
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"0"</span> <span style="color: #99ad6a;">"M-0"</span><span style="color: #93a8c6;">)</span>
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"1"</span> <span style="color: #99ad6a;">"M-1"</span><span style="color: #93a8c6;">)</span>
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"2"</span> <span style="color: #99ad6a;">"M-2"</span><span style="color: #93a8c6;">)</span>
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"3"</span> <span style="color: #99ad6a;">"M-3"</span><span style="color: #93a8c6;">)</span>
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"4"</span> <span style="color: #99ad6a;">"M-4"</span><span style="color: #93a8c6;">)</span>
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"5"</span> <span style="color: #99ad6a;">"M-5"</span><span style="color: #93a8c6;">)</span>
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"6"</span> <span style="color: #99ad6a;">"M-6"</span><span style="color: #93a8c6;">)</span>
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"7"</span> <span style="color: #99ad6a;">"M-7"</span><span style="color: #93a8c6;">)</span>
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"8"</span> <span style="color: #99ad6a;">"M-8"</span><span style="color: #93a8c6;">)</span>
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"9"</span> <span style="color: #99ad6a;">"M-9"</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<p>
+First we specify the key we want to use, and then the <i>target</i> of the key. Above I&rsquo;ve bound <code>hjkl</code> to vim-like navigation, and the digit keys are used to simulate the <code>digit-argument</code> bindings. There&rsquo;s also more features, which is useful in a modal environment:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span style="color: #8c8c8c;">(</span>ryo-modal-keys
+ <span style="color: #93a8c6;">(</span><span style="color: #99ad6a;">"c"</span>
+  <span style="color: #b0b1a3;">(</span><span style="color: #97b098;">(</span><span style="color: #99ad6a;">"c"</span> kill-whole-line <span style="color: #8fbfdc;">:then</span> '<span style="color: #aebed8;">(</span>open-line<span style="color: #aebed8;">)</span> <span style="color: #8fbfdc;">:exit</span> t<span style="color: #97b098;">)</span>
+   <span style="color: #97b098;">(</span><span style="color: #99ad6a;">"w"</span> kill-word <span style="color: #8fbfdc;">:exit</span> t<span style="color: #97b098;">)</span>
+   <span style="color: #97b098;">(</span><span style="color: #99ad6a;">"h"</span> org-previous-heading <span style="color: #8fbfdc;">:then</span> '<span style="color: #aebed8;">(</span>forward-to-word
+                                     org-kill-line<span style="color: #aebed8;">)</span>
+    <span style="color: #8fbfdc;">:read</span> t <span style="color: #8fbfdc;">:mode</span> 'org-mode <span style="color: #8fbfdc;">:name</span> <span style="color: #99ad6a;">"org-change-previous-heading"</span><span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<p>
+Here I have a list of keybindings as the <i>target</i> for the <code>c</code> key. This means that the list will use <code>c</code> as a prefix, so <code>c w</code> would run <code>kill-word</code> and then exit <code>ryo-modal-mode</code>. I also use the <code>:then</code> keyword, which makes it possible to bind the key to a chain of commands; pressing <code>c c</code> will kill the line and then make a new line where the line was, and then exit <code>ryo-modal-mode</code>.
+</p>
+
+<p>
+The <code>c h</code> binding is complex. It will run <code>org-previous-heading</code>, then <code>forward-to-word</code> and then <code>org-kill-line</code>. It also uses the <code>:read</code> keyword: the user will insert text into the minibuffer and that text will then be inserted. This keybinding only makes sense if we&rsquo;re in <code>org-mode</code>, so we use the <code>:mode</code> keyword to specify this. If we&rsquo;d run <code>C-h k</code> to describe a binding in <span class="underline">RYO</span>, <span class="underline">RYO</span> will make up a name for the command<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>. By using the <code>:name</code> keyword we can give our command a custom name. The name and keys of all <span class="underline">RYO</span> keybindings can be viewed with <code>M-x ryo-modal-bindings</code><sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>.
+</p>
+</section>
+
+<section>
+<p>
+<span class="underline">The Hydra package</span> let&rsquo;s you define &ldquo;Emacs bindings that stick around&rdquo;<sup><a id="fnr.6" class="footref" href="#fn.6">6</a></sup>. Its a bit hard to describe, but basically it creates <i>mini modal modes</i>, called <i>hydras</i>, where entering a hydra provides keybindings for that mode. The minibuffer also provides you with help about what the hydra does. To me, having this functionality in an already modal environment extends the modal editing experience, so I added functionality to easily create and bind hydras to keys in <span class="underline">RYO</span>.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span style="color: #8c8c8c;">(</span>ryo-modal-key
+ <span style="color: #99ad6a;">"SPC g"</span> <span style="color: #8fbfdc;">:hydra</span>
+ '<span style="color: #93a8c6;">(</span>hydra-git <span style="color: #b0b1a3;">()</span>
+             <span style="color: #99ad6a;">"A hydra for git!"</span>
+             <span style="color: #b0b1a3;">(</span><span style="color: #99ad6a;">"g"</span> magit-status <span style="color: #99ad6a;">"magit"</span> <span style="color: #8fbfdc;">:color</span> blue<span style="color: #b0b1a3;">)</span>
+             <span style="color: #b0b1a3;">(</span><span style="color: #99ad6a;">"j"</span> git-gutter:next-hunk <span style="color: #99ad6a;">"next"</span><span style="color: #b0b1a3;">)</span>
+             <span style="color: #b0b1a3;">(</span><span style="color: #99ad6a;">"k"</span> git-gutter:previous-hunk <span style="color: #99ad6a;">"previous"</span><span style="color: #b0b1a3;">)</span>
+             <span style="color: #b0b1a3;">(</span><span style="color: #99ad6a;">"d"</span> git-gutter:popup-hunk <span style="color: #99ad6a;">"diff"</span><span style="color: #b0b1a3;">)</span>
+             <span style="color: #b0b1a3;">(</span><span style="color: #99ad6a;">"s"</span> git-gutter:stage-hunk <span style="color: #99ad6a;">"stage"</span><span style="color: #b0b1a3;">)</span>
+             <span style="color: #b0b1a3;">(</span><span style="color: #99ad6a;">"r"</span> git-gutter:revert-hunk <span style="color: #99ad6a;">"revert"</span><span style="color: #b0b1a3;">)</span>
+             <span style="color: #b0b1a3;">(</span><span style="color: #99ad6a;">"m"</span> git-gutter:mark-hunk <span style="color: #99ad6a;">"mark"</span><span style="color: #b0b1a3;">)</span>
+             <span style="color: #b0b1a3;">(</span><span style="color: #99ad6a;">"q"</span> nil <span style="color: #99ad6a;">"cancel"</span> <span style="color: #8fbfdc;">:color</span> blue<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<p>
+The code above uses commands from <a href="https://magit.vc/">Magit</a> and <a href="https://github.com/syohex/emacs-git-gutter">git-gutter</a> to define a hydra for <a href="https://git-scm.com/">git</a>, and binds it to <code>SPC g</code>. This is done by having <code>:hydra</code> as the key&rsquo;s <i>target</i>, and then a quoted list containing the definition of the hydra. Hydra isn&rsquo;t a <i>requirement</i> for <span class="underline">RYO</span>; you do not need to have it installed in order to use <span class="underline">RYO</span>, but I think its a good additition to any Emacs configuration.
+</p>
+</section>
+
+<section>
+<p>
+<a href="https://github.com/Kungsgeten/selected.el"><span class="underline">Selected.el</span></a> is a way to have special keybindings when the region is active<sup><a id="fnr.7" class="footref" href="#fn.7">7</a></sup>, so its a natural fit for <span class="underline">RYO</span>. If you only want it active when using <span class="underline">RYO</span>, you can use <code>ryo-modal-mode-hook</code> to turn it on and off:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span style="color: #8c8c8c;">(</span>add-hook 'ryo-modal-mode-hook
+            <span style="color: #93a8c6;">(</span><span style="color: #8197bf;">lambda</span> <span style="color: #b0b1a3;">()</span>
+              <span style="color: #b0b1a3;">(</span><span style="color: #8197bf;">if</span> ryo-modal-mode
+                  <span style="color: #97b098;">(</span>selected-minor-mode 1<span style="color: #97b098;">)</span>
+                <span style="color: #97b098;">(</span>selected-minor-mode -1<span style="color: #97b098;">)</span><span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+</section>
+
+<section>
+<p>
+<span class="underline">Ryo is a minor mode</span>, and it doesn&rsquo;t bind any default keys for you. This have both upsides and downsides: if you haven&rsquo;t bound a key in <span class="underline">RYO</span>, it will have its usual functionality<sup><a id="fnr.8" class="footref" href="#fn.8">8</a></sup>, including inserting text<sup><a id="fnr.9" class="footref" href="#fn.9">9</a></sup>. Perhaps there will be an update in the future to prevent the user from inserting text while using <span class="underline">RYO</span>, but for now the power is in the hands of the users.
+</p>
+
+<p>
+Please have a look at <span class="underline">RYO</span> on its <a href="https://github.com/Kungsgeten/ryo-modal">Github page</a>, and please share any configurations you make with it!
+</p>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+The most famous are <i>Vi(m) emulations</i> like <a href="https://bitbucket.org/lyro/evil/wiki/Home">Evil</a> and <a href="https://www.emacswiki.org/emacs/ViperMode">Viper</a>. There&rsquo;s also others which provide modal editing, but doesn&rsquo;t try to mimic Vim: <a href="https://github.com/jyp/boon">Boon</a>, <a href="http://ergoemacs.org/misc/ergoemacs_vi_mode.html">Xah Fly Keys</a>, <a href="https://github.com/chrisdone/god-mode">God Mode</a>, <a href="https://github.com/fgeller/fingers.el">Fingers</a>&#x2026;
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+Mnemonic <i>change word</i>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+I actually made <a href="https://github.com/mrkkrp/modalka/pull/11">a pull request</a> to Modalka, providing this functionality. The maintainer wants to keep the codebase as lightweight and minimal as possible though, which I respect.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
+Based on the <i>target</i> of the key.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5">5</a></sup> <div class="footpara"><p class="footpara">
+Like <code>describe-personal-keybindings</code> in <code>use-package</code>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6">6</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://github.com/abo-abo/hydra">https://github.com/abo-abo/hydra</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7">7</a></sup> <div class="footpara"><p class="footpara">
+Like Vim&rsquo;s <i>visual mode</i> when you&rsquo;ve selected some text.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8">8</a></sup> <div class="footpara"><p class="footpara">
+Like <code>C-x s</code> to save etc.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.9" class="footnum" href="#fnr.9">9</a></sup> <div class="footpara"><p class="footpara">
+So typing <code>P</code> would insert <code>P</code> into the buffer, unless you have bound <code>P</code> to something.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//kungsgeten.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</body>
+</html>

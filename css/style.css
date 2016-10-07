@@ -93,10 +93,10 @@ a:hover {
 pre,
 code {
   font-family: "Cousine", monospace;
-  background-color: #e6e6da;
 }
 pre {
   font-size: 60%;
+  background-color: #fff;
   padding: 3pt;
   margin: 1.2em 0em;
 }
@@ -107,6 +107,7 @@ pre {
 }
 code {
   font-size: 85%;
+  background-color: #e6e6da;
   border: 1px solid #ccc;
 }
 table {
