@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<!-- 2016-10-07 Fri 12:05 -->
-<meta  charset="utf-8">
-<meta  name="viewport" content="width=device-width, initial-scale=1">
+<!-- 2017-02-16 Thu 13:19 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title></title>
-<meta  name="generator" content="Org-mode">
-<meta  name="author" content="Erik Sjöstrand">
+<meta name="generator" content="Org mode">
+<meta name="author" content="Erik Sjöstrand">
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -51,13 +51,97 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
@@ -90,6 +174,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <link rel='stylesheet' type='text/css' href='css/style.css'>
@@ -155,14 +240,377 @@ for the JavaScript code in this tag.
 </div>
 <div id="content">
 
-<div id="outline-container-orgheadline1" class="outline-2 blogcategory">
-<h2 id="orgheadline1">Emacs</h2>
-<div class="outline-text-2" id="text-orgheadline1">
+<div id="outline-container-org341335f" class="outline-2 blogcategory">
+<h2 id="org341335f">Emacs</h2>
+<div class="outline-text-2" id="text-org341335f">
 <ul class="org-ul">
 <li><span class="timestamp-wrapper"><span class="timestamp">[2016-10-07 Fri] </span></span> <a href="ryo-modal.html"><span class="underline">RYO</span></a> &#x2013; <i>Roll your own modal mode!</i></li>
 <li><span class="timestamp-wrapper"><span class="timestamp">[2016-08-15 Mon] </span></span> <a href="yankpad13.html">Yankpad 1.3</a> &#x2013; <i>Keywords and function calls</i></li>
 <li><span class="timestamp-wrapper"><span class="timestamp">[2016-07-03 Sun] </span></span> <a href="yankpad.html">Yankpad</a> &#x2013; <i>Text snippets using org-mode</i></li>
 </ul>
+</div>
+</div>
+
+<div id="outline-container-org05c521b" class="outline-2 blogcategory">
+<h2 id="org05c521b">The Steaming Pile</h2>
+<div class="outline-text-2" id="text-org05c521b">
+<p>
+As of 2017-02-16 I have 409 games in <a href="http://steamcommunity.com/id/clerik/">my Steam account</a>, I haven&rsquo;t even started the majority of them. Using <a href="https://github.com/kungsgeten/steam.el">an organizational tool</a> I&rsquo;ve divided these games into several categories, one of them being <i>games to try</i> containing 95 games alone. So <i>The Steaming Pile</i> is my attempt to <i>play more, buy less</i> and go through my backlog, providing my thoughts along the way.
+</p>
+</div>
+
+<div id="outline-container-orge19e23d" class="outline-3">
+<h3 id="orge19e23d"><span class="todo TODO">TODO</span> A Bird Story</h3>
+</div>
+<div id="outline-container-orga5d03bb" class="outline-3">
+<h3 id="orga5d03bb"><span class="todo TODO">TODO</span> A Boy and His Blob</h3>
+</div>
+<div id="outline-container-org3c06498" class="outline-3">
+<h3 id="org3c06498"><span class="todo TODO">TODO</span> A Wizard&rsquo;s Lizard</h3>
+</div>
+<div id="outline-container-org30e285e" class="outline-3">
+<h3 id="org30e285e"><a id="ID-d7719589-66d3-43bc-80b6-239629c58e17"></a><span class="todo TODO">TODO</span> AI War: Fleet Command</h3>
+<div class="outline-text-3" id="text-org30e285e">
+</div>
+</div>
+<div id="outline-container-org5b12f32" class="outline-3">
+<h3 id="org5b12f32"><span class="todo TODO">TODO</span> Anno 2070</h3>
+</div>
+<div id="outline-container-org7987b85" class="outline-3">
+<h3 id="org7987b85"><a id="ID-540d1e36-6ad8-4b3b-b281-539363ece12a"></a><span class="todo TODO">TODO</span> Assault Android Cactus</h3>
+<div class="outline-text-3" id="text-org7987b85">
+</div>
+</div>
+<div id="outline-container-org9a72118" class="outline-3">
+<h3 id="org9a72118"><span class="todo TODO">TODO</span> Bionic Dues</h3>
+</div>
+<div id="outline-container-org50fa78d" class="outline-3">
+<h3 id="org50fa78d"><span class="todo TODO">TODO</span> Broken Age</h3>
+</div>
+<div id="outline-container-org717a123" class="outline-3">
+<h3 id="org717a123"><span class="todo TODO">TODO</span> Brothers - A Tale of Two Sons</h3>
+</div>
+<div id="outline-container-orgd4668e2" class="outline-3">
+<h3 id="orgd4668e2"><span class="todo TODO">TODO</span> Brütal Legend</h3>
+</div>
+<div id="outline-container-org69185d7" class="outline-3">
+<h3 id="org69185d7"><span class="todo TODO">TODO</span> Child of Light</h3>
+</div>
+<div id="outline-container-org325c9cf" class="outline-3">
+<h3 id="org325c9cf"><a id="ID-6007859b-6fa3-4f7d-aba7-3b2d016e601b"></a><span class="todo TODO">TODO</span> Chroma Squad</h3>
+<div class="outline-text-3" id="text-org325c9cf">
+</div>
+</div>
+<div id="outline-container-orgbf934f7" class="outline-3">
+<h3 id="orgbf934f7"><span class="todo TODO">TODO</span> Cibele</h3>
+</div>
+<div id="outline-container-org5d253ba" class="outline-3">
+<h3 id="org5d253ba"><span class="todo TODO">TODO</span> Convoy</h3>
+</div>
+<div id="outline-container-org2252e7a" class="outline-3">
+<h3 id="org2252e7a"><span class="todo TODO">TODO</span> Costume Quest</h3>
+</div>
+<div id="outline-container-org3d1aa10" class="outline-3">
+<h3 id="org3d1aa10"><span class="todo TODO">TODO</span> Crimzon Clover  WORLD IGNITION</h3>
+</div>
+<div id="outline-container-org7023bd6" class="outline-3">
+<h3 id="org7023bd6"><a id="ID-9e90684b-1a31-4adc-b10a-1405c2220513"></a><span class="todo TODO">TODO</span> CRYPTARK</h3>
+<div class="outline-text-3" id="text-org7023bd6">
+</div>
+</div>
+<div id="outline-container-org231dbd3" class="outline-3">
+<h3 id="org231dbd3"><span class="todo TODO">TODO</span> Dark Souls: Prepare to Die Edition</h3>
+</div>
+<div id="outline-container-orge487dfb" class="outline-3">
+<h3 id="orge487dfb"><span class="todo TODO">TODO</span> Delver</h3>
+</div>
+<div id="outline-container-org2bcd1ee" class="outline-3">
+<h3 id="org2bcd1ee"><span class="todo TODO">TODO</span> Deponia: The Complete Journey</h3>
+</div>
+<div id="outline-container-org4179d5c" class="outline-3">
+<h3 id="org4179d5c"><a id="ID-edae0237-ff82-4361-8c68-15532452728d"></a><span class="todo TODO">TODO</span> Devil Daggers</h3>
+<div class="outline-text-3" id="text-org4179d5c">
+</div>
+</div>
+<div id="outline-container-orga835d93" class="outline-3">
+<h3 id="orga835d93"><a id="ID-6baa8e3f-5e95-4066-8acd-9794477d36ce"></a><span class="todo TODO">TODO</span> Disgaea PC</h3>
+<div class="outline-text-3" id="text-orga835d93">
+</div>
+</div>
+<div id="outline-container-orgc14283f" class="outline-3">
+<h3 id="orgc14283f"><span class="todo TODO">TODO</span> Dominions 4</h3>
+</div>
+<div id="outline-container-org2bc9336" class="outline-3">
+<h3 id="org2bc9336"><span class="todo TODO">TODO</span> Dropsy</h3>
+</div>
+<div id="outline-container-orgbed087e" class="outline-3">
+<h3 id="orgbed087e"><a id="ID-4f45dc2b-fafc-4ff3-ab84-2ef24d781245"></a><span class="todo TODO">TODO</span> Dungetris</h3>
+<div class="outline-text-3" id="text-orgbed087e">
+</div>
+</div>
+<div id="outline-container-orga5c448a" class="outline-3">
+<h3 id="orga5c448a"><span class="todo TODO">TODO</span> Dust: An Elysian Tail</h3>
+</div>
+<div id="outline-container-orgd3517b3" class="outline-3">
+<h3 id="orgd3517b3"><span class="todo TODO">TODO</span> Dustforce</h3>
+</div>
+<div id="outline-container-orgb25cad9" class="outline-3">
+<h3 id="orgb25cad9"><span class="todo TODO">TODO</span> Dynamite Jack</h3>
+</div>
+<div id="outline-container-org146b8b9" class="outline-3">
+<h3 id="org146b8b9"><span class="todo TODO">TODO</span> Eets Munchies</h3>
+</div>
+<div id="outline-container-org1978111" class="outline-3">
+<h3 id="org1978111"><a id="ID-c4eb9271-7c7a-4fe2-8ec3-e7aa96e05f60"></a><span class="todo TODO">TODO</span> Elegy For A Dead World</h3>
+<div class="outline-text-3" id="text-org1978111">
+</div>
+</div>
+<div id="outline-container-orgb797717" class="outline-3">
+<h3 id="orgb797717"><a id="ID-d008dfc3-8da6-4a08-9d8a-7cbd038c7475"></a><span class="todo TODO">TODO</span> Ellipsis</h3>
+<div class="outline-text-3" id="text-orgb797717">
+</div>
+</div>
+<div id="outline-container-orgff5a9f5" class="outline-3">
+<h3 id="orgff5a9f5"><span class="todo TODO">TODO</span> Endless Legend</h3>
+</div>
+<div id="outline-container-org9b9da92" class="outline-3">
+<h3 id="org9b9da92"><a id="ID-1e0fd321-a6a6-4f9c-a4d9-dba55690585f"></a><span class="todo TODO">TODO</span> Endless Sky</h3>
+<div class="outline-text-3" id="text-org9b9da92">
+</div>
+</div>
+<div id="outline-container-org5fe833d" class="outline-3">
+<h3 id="org5fe833d"><span class="todo TODO">TODO</span> Environmental Station Alpha</h3>
+</div>
+<div id="outline-container-orgc01cb6c" class="outline-3">
+<h3 id="orgc01cb6c"><span class="todo TODO">TODO</span> Euro Truck Simulator 2</h3>
+</div>
+<div id="outline-container-org29a325e" class="outline-3">
+<h3 id="org29a325e"><span class="todo TODO">TODO</span> Europa Universalis IV</h3>
+</div>
+<div id="outline-container-org033b62c" class="outline-3">
+<h3 id="org033b62c"><a id="ID-ed192bf7-1a45-49e5-8662-4ceb78333db8"></a><span class="todo TODO">TODO</span> Firewatch</h3>
+<div class="outline-text-3" id="text-org033b62c">
+</div>
+</div>
+<div id="outline-container-orgd9fb60b" class="outline-3">
+<h3 id="orgd9fb60b"><span class="todo TODO">TODO</span> Frozen Cortex</h3>
+</div>
+<div id="outline-container-orgc499ffe" class="outline-3">
+<h3 id="orgc499ffe"><a id="ID-a84f7672-cd19-4367-98ce-8f3d8df5140d"></a><span class="todo TODO">TODO</span> Girls Like Robots</h3>
+<div class="outline-text-3" id="text-orgc499ffe">
+</div>
+</div>
+<div id="outline-container-orgdd4090b" class="outline-3">
+<h3 id="orgdd4090b"><span class="todo TODO">TODO</span> Gods Will Be Watching</h3>
+</div>
+<div id="outline-container-org50597e7" class="outline-3">
+<h3 id="org50597e7"><span class="todo TODO">TODO</span> Gone Home</h3>
+</div>
+<div id="outline-container-org58d8f1d" class="outline-3">
+<h3 id="org58d8f1d"><a id="ID-421e2b61-bf2b-40b1-8b56-61d2421a9ea2"></a><span class="todo TODO">TODO</span> Guacamelee! Super Turbo Championship Edition</h3>
+<div class="outline-text-3" id="text-org58d8f1d">
+</div>
+</div>
+<div id="outline-container-org9824fca" class="outline-3">
+<h3 id="org9824fca"><span class="todo TODO">TODO</span> Hack &rsquo;n&rsquo; Slash</h3>
+</div>
+<div id="outline-container-orge23925b" class="outline-3">
+<h3 id="orge23925b"><span class="todo TODO">TODO</span> Hatoful Boyfriend: Holiday Star</h3>
+</div>
+<div id="outline-container-org0a8d75e" class="outline-3">
+<h3 id="org0a8d75e"><a id="ID-b7d5aa01-e098-4e0f-be56-f89a475fa0f4"></a><span class="todo TODO">TODO</span> Hot Tin Roof: The Cat That Wore A Fedora</h3>
+<div class="outline-text-3" id="text-org0a8d75e">
+</div>
+</div>
+<div id="outline-container-org824b568" class="outline-3">
+<h3 id="org824b568"><a id="ID-75903aa9-767d-4ab7-a179-8d13e7d6383d"></a><span class="todo TODO">TODO</span> INSIDE</h3>
+<div class="outline-text-3" id="text-org824b568">
+</div>
+</div>
+<div id="outline-container-org9ea2ad8" class="outline-3">
+<h3 id="org9ea2ad8"><span class="todo TODO">TODO</span> La-Mulana</h3>
+</div>
+<div id="outline-container-orgd40401d" class="outline-3">
+<h3 id="orgd40401d"><a id="ID-9f91f33f-12b5-4caa-b67b-04b7ab77f237"></a><span class="todo TODO">TODO</span> Little King&rsquo;s Story</h3>
+<div class="outline-text-3" id="text-orgd40401d">
+</div>
+</div>
+<div id="outline-container-orge3dd350" class="outline-3">
+<h3 id="orge3dd350"><span class="todo TODO">TODO</span> Lumino City</h3>
+</div>
+<div id="outline-container-orgff06d00" class="outline-3">
+<h3 id="orgff06d00"><span class="todo TODO">TODO</span> MASSIVE CHALICE</h3>
+</div>
+<div id="outline-container-org7f4683b" class="outline-3">
+<h3 id="org7f4683b"><span class="todo TODO">TODO</span> Mercenary Kings</h3>
+</div>
+<div id="outline-container-org0deb99c" class="outline-3">
+<h3 id="org0deb99c"><a id="ID-c729d0d7-e687-4810-bbe3-49d178e5f11f"></a><span class="todo TODO">TODO</span> Mushroom 11</h3>
+<div class="outline-text-3" id="text-org0deb99c">
+</div>
+</div>
+<div id="outline-container-orga1c3942" class="outline-3">
+<h3 id="orga1c3942"><span class="todo TODO">TODO</span> No Time to Explain</h3>
+</div>
+<div id="outline-container-org5ccc5d2" class="outline-3">
+<h3 id="org5ccc5d2"><span class="todo TODO">TODO</span> NOT A HERO</h3>
+</div>
+<div id="outline-container-org5bc84a7" class="outline-3">
+<h3 id="org5bc84a7"><span class="todo TODO">TODO</span> Not The Robots</h3>
+</div>
+<div id="outline-container-orgb09fd2c" class="outline-3">
+<h3 id="orgb09fd2c"><span class="todo TODO">TODO</span> Offworld Trading Company</h3>
+</div>
+<div id="outline-container-org8614a6e" class="outline-3">
+<h3 id="org8614a6e"><span class="todo TODO">TODO</span> Oil Rush</h3>
+</div>
+<div id="outline-container-org00fd031" class="outline-3">
+<h3 id="org00fd031"><span class="todo TODO">TODO</span> Ori and the Blind Forest</h3>
+</div>
+<div id="outline-container-orgc7af2ea" class="outline-3">
+<h3 id="orgc7af2ea"><span class="todo TODO">TODO</span> Phantom Breaker: Battle Grounds</h3>
+</div>
+<div id="outline-container-org0d8d9b1" class="outline-3">
+<h3 id="org0d8d9b1"><a id="ID-97a55fac-aa2f-462d-a056-53be6a3c2459"></a><span class="todo TODO">TODO</span> Prison Architect</h3>
+<div class="outline-text-3" id="text-org0d8d9b1">
+</div>
+</div>
+<div id="outline-container-orgddd05b2" class="outline-3">
+<h3 id="orgddd05b2"><span class="todo TODO">TODO</span> Raiden IV: OverKill</h3>
+</div>
+<div id="outline-container-org9c23803" class="outline-3">
+<h3 id="org9c23803"><span class="todo TODO">TODO</span> Read Only Memories</h3>
+</div>
+<div id="outline-container-org8a2f717" class="outline-3">
+<h3 id="org8a2f717"><span class="todo TODO">TODO</span> Recettear: An Item Shop&rsquo;s Tale</h3>
+</div>
+<div id="outline-container-org767b09d" class="outline-3">
+<h3 id="org767b09d"><a id="ID-f9b1213a-3e63-40c8-b732-f3d40bafe330"></a><span class="todo TODO">TODO</span> Retro Game Crunch</h3>
+<div class="outline-text-3" id="text-org767b09d">
+</div>
+</div>
+<div id="outline-container-orga620fa0" class="outline-3">
+<h3 id="orga620fa0"><a id="ID-4de46677-f26d-4350-aab7-e972cbfef7ca"></a><span class="todo TODO">TODO</span> Road to Ballhalla</h3>
+<div class="outline-text-3" id="text-orga620fa0">
+</div>
+</div>
+<div id="outline-container-org8a897de" class="outline-3">
+<h3 id="org8a897de"><a id="ID-d10f501c-bcd2-4ce6-9249-1c4f4c5513de"></a><span class="todo TODO">TODO</span> ROCKETSROCKETSROCKETS</h3>
+<div class="outline-text-3" id="text-org8a897de">
+</div>
+</div>
+<div id="outline-container-org5183a27" class="outline-3">
+<h3 id="org5183a27"><span class="todo TODO">TODO</span> ROD: Revolt Of Defense</h3>
+</div>
+<div id="outline-container-org1a3125d" class="outline-3">
+<h3 id="org1a3125d"><span class="todo TODO">TODO</span> RONIN</h3>
+</div>
+<div id="outline-container-org54de516" class="outline-3">
+<h3 id="org54de516"><span class="todo TODO">TODO</span> Shantae: Risky&rsquo;s Revenge - Director&rsquo;s Cut</h3>
+</div>
+<div id="outline-container-org33e25a7" class="outline-3">
+<h3 id="org33e25a7"><a id="ID-49974eda-7219-4b9e-ac87-929cb67fe2ea"></a><span class="todo TODO">TODO</span> Song of the Deep</h3>
+<div class="outline-text-3" id="text-org33e25a7">
+</div>
+</div>
+<div id="outline-container-orged0cab4" class="outline-3">
+<h3 id="orged0cab4"><span class="todo TODO">TODO</span> SpaceChem</h3>
+</div>
+<div id="outline-container-org11ed6f7" class="outline-3">
+<h3 id="org11ed6f7"><a id="ID-ad33e79f-fd65-4db6-a0e5-2225bb2a0fa8"></a><span class="todo TODO">TODO</span> Sproggiwood</h3>
+<div class="outline-text-3" id="text-org11ed6f7">
+</div>
+</div>
+<div id="outline-container-org073a295" class="outline-3">
+<h3 id="org073a295"><span class="todo TODO">TODO</span> Super Splatters</h3>
+</div>
+<div id="outline-container-orgb9e7977" class="outline-3">
+<h3 id="orgb9e7977"><span class="todo TODO">TODO</span> Superbrothers: Sword &amp; Sworcery EP</h3>
+</div>
+<div id="outline-container-org2d843c5" class="outline-3">
+<h3 id="org2d843c5"><a id="ID-7f1ad6ac-7e25-43a9-a0d5-4de283f2157a"></a><span class="todo TODO">TODO</span> Tadpole Treble</h3>
+<div class="outline-text-3" id="text-org2d843c5">
+</div>
+</div>
+<div id="outline-container-org33c49b4" class="outline-3">
+<h3 id="org33c49b4"><span class="todo TODO">TODO</span> The Aquatic Adventure of the Last Human</h3>
+</div>
+<div id="outline-container-org09a8062" class="outline-3">
+<h3 id="org09a8062"><a id="ID-fe6b35da-1563-4095-a653-9b55897a71cd"></a><span class="todo TODO">TODO</span> The Escapists</h3>
+<div class="outline-text-3" id="text-org09a8062">
+</div>
+</div>
+<div id="outline-container-orgfe99242" class="outline-3">
+<h3 id="orgfe99242"><a id="ID-ae94f5de-c1c7-4ad8-aa27-7f3fc181bb76"></a><span class="todo TODO">TODO</span> The Flame in the Flood</h3>
+<div class="outline-text-3" id="text-orgfe99242">
+</div>
+</div>
+<div id="outline-container-org9e2bed6" class="outline-3">
+<h3 id="org9e2bed6"><span class="todo TODO">TODO</span> The Nightmare Cooperative</h3>
+</div>
+<div id="outline-container-org5163986" class="outline-3">
+<h3 id="org5163986"><a id="ID-58a20a6c-b53b-4607-b2de-ea8ee1c18070"></a><span class="todo TODO">TODO</span> The Silent Age</h3>
+<div class="outline-text-3" id="text-org5163986">
+</div>
+</div>
+<div id="outline-container-orge65f3f2" class="outline-3">
+<h3 id="orge65f3f2"><span class="todo TODO">TODO</span> The Talos Principle</h3>
+</div>
+<div id="outline-container-org35dee03" class="outline-3">
+<h3 id="org35dee03"><span class="todo TODO">TODO</span> The Vanishing of Ethan Carter - Redux</h3>
+</div>
+<div id="outline-container-orgc0eb40c" class="outline-3">
+<h3 id="orgc0eb40c"><a id="ID-0ec8953c-2e16-4535-8ab2-6c69bf1c1be9"></a><span class="todo TODO">TODO</span> The Witness</h3>
+<div class="outline-text-3" id="text-orgc0eb40c">
+</div>
+</div>
+<div id="outline-container-org2d3da02" class="outline-3">
+<h3 id="org2d3da02"><span class="todo TODO">TODO</span> The Wolf Among Us</h3>
+</div>
+<div id="outline-container-orgd6bed68" class="outline-3">
+<h3 id="orgd6bed68"><span class="todo TODO">TODO</span> This War of Mine</h3>
+</div>
+<div id="outline-container-orgd540b13" class="outline-3">
+<h3 id="orgd540b13"><span class="todo TODO">TODO</span> Titan Souls</h3>
+</div>
+<div id="outline-container-org31a7e37" class="outline-3">
+<h3 id="org31a7e37"><a id="ID-7e95ce18-8bf2-43ed-a329-cbb3dc00a354"></a><span class="todo TODO">TODO</span> Tower of Guns</h3>
+<div class="outline-text-3" id="text-org31a7e37">
+</div>
+</div>
+<div id="outline-container-org3bfe97d" class="outline-3">
+<h3 id="org3bfe97d"><span class="todo TODO">TODO</span> Transistor</h3>
+</div>
+<div id="outline-container-orgee0375e" class="outline-3">
+<h3 id="orgee0375e"><span class="todo TODO">TODO</span> Tropico 4</h3>
+</div>
+<div id="outline-container-org5f06ec6" class="outline-3">
+<h3 id="org5f06ec6"><a id="ID-da801629-78fc-467e-828b-3ad6454e14e9"></a><span class="todo TODO">TODO</span> Twilight Struggle</h3>
+<div class="outline-text-3" id="text-org5f06ec6">
+</div>
+</div>
+<div id="outline-container-org773c8e3" class="outline-3">
+<h3 id="org773c8e3"><a id="ID-f787d87d-ba40-49af-99df-f7b5e21c646c"></a><span class="todo TODO">TODO</span> Undertale</h3>
+<div class="outline-text-3" id="text-org773c8e3">
+</div>
+</div>
+<div id="outline-container-org7702ad4" class="outline-3">
+<h3 id="org7702ad4"><a id="ID-f989d39f-a51e-416e-8edd-5f506f28f2fc"></a><span class="todo TODO">TODO</span> Valiant Hearts: The Great War</h3>
+<div class="outline-text-3" id="text-org7702ad4">
+</div>
+</div>
+<div id="outline-container-org3555651" class="outline-3">
+<h3 id="org3555651"><a id="ID-9e30d23c-45b3-490e-b465-aa8b93850920"></a><span class="todo TODO">TODO</span> Waking Mars</h3>
+<div class="outline-text-3" id="text-org3555651">
+</div>
+</div>
+<div id="outline-container-org0118d5e" class="outline-3">
+<h3 id="org0118d5e"><a id="ID-06bf7a2f-3d70-4553-8544-19b4a75549c6"></a><span class="todo TODO">TODO</span> Westerado: Double Barreled</h3>
+<div class="outline-text-3" id="text-org0118d5e">
+</div>
+</div>
+<div id="outline-container-org671a99b" class="outline-3">
+<h3 id="org671a99b"><span class="todo TODO">TODO</span> XCOM: Enemy Unknown</h3>
 </div>
 </div>
 </div>

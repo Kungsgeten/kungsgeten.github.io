@@ -11,3 +11,208 @@
 - [2016-10-07 Fri] [[file:ryo-modal.html][_RYO_]] -- /Roll your own modal mode!/
 - [2016-08-15 Mon] [[file:yankpad13.html][Yankpad 1.3]] -- /Keywords and function calls/
 - [2016-07-03 Sun] [[file:yankpad.html][Yankpad]] -- /Text snippets using org-mode/
+
+* The Steaming Pile
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blogcategory
+:END:
+
+As of 2017-02-16 I have 409 games in [[http://steamcommunity.com/id/clerik/][my Steam account]], I haven't even started the majority of them. Using [[https://github.com/kungsgeten/steam.el][an organizational tool]] I've divided these games into several categories, one of them being /games to try/ containing 95 games alone. So /The Steaming Pile/ is my attempt to /play more, buy less/ and go through my backlog, providing my thoughts along the way.
+
+** TODO A Bird Story
+** TODO A Boy and His Blob
+** TODO A Wizard's Lizard
+** TODO AI War: Fleet Command
+:PROPERTIES:
+:ID:       d7719589-66d3-43bc-80b6-239629c58e17
+:END:
+** TODO Anno 2070
+** TODO Assault Android Cactus
+:PROPERTIES:
+:ID:       540d1e36-6ad8-4b3b-b281-539363ece12a
+:END:
+** TODO Bionic Dues
+** TODO Broken Age
+** TODO Brothers - A Tale of Two Sons
+** TODO Brütal Legend
+** TODO Child of Light
+** TODO Chroma Squad
+:PROPERTIES:
+:ID:       6007859b-6fa3-4f7d-aba7-3b2d016e601b
+:END:
+** TODO Cibele
+** TODO Convoy
+** TODO Costume Quest
+** TODO Crimzon Clover  WORLD IGNITION
+** TODO CRYPTARK
+:PROPERTIES:
+:ID:       9e90684b-1a31-4adc-b10a-1405c2220513
+:END:
+** TODO Dark Souls: Prepare to Die Edition
+** TODO Delver
+** TODO Deponia: The Complete Journey
+** TODO Devil Daggers
+:PROPERTIES:
+:ID:       edae0237-ff82-4361-8c68-15532452728d
+:END:
+** TODO Disgaea PC
+:PROPERTIES:
+:ID:       6baa8e3f-5e95-4066-8acd-9794477d36ce
+:END:
+** TODO Dominions 4
+** TODO Dropsy
+** TODO Dungetris
+:PROPERTIES:
+:ID:       4f45dc2b-fafc-4ff3-ab84-2ef24d781245
+:END:
+** TODO Dust: An Elysian Tail
+** TODO Dustforce
+** TODO Dynamite Jack
+** TODO Eets Munchies
+** TODO Elegy For A Dead World
+:PROPERTIES:
+:ID:       c4eb9271-7c7a-4fe2-8ec3-e7aa96e05f60
+:END:
+** TODO Ellipsis
+:PROPERTIES:
+:ID:       d008dfc3-8da6-4a08-9d8a-7cbd038c7475
+:END:
+** TODO Endless Legend
+** TODO Endless Sky
+:PROPERTIES:
+:ID:       1e0fd321-a6a6-4f9c-a4d9-dba55690585f
+:END:
+** TODO Environmental Station Alpha
+** TODO Euro Truck Simulator 2
+** TODO Europa Universalis IV
+** TODO Firewatch
+:PROPERTIES:
+:ID:       ed192bf7-1a45-49e5-8662-4ceb78333db8
+:END:
+** TODO Frozen Cortex
+** TODO Girls Like Robots
+:PROPERTIES:
+:ID:       a84f7672-cd19-4367-98ce-8f3d8df5140d
+:END:
+** TODO Gods Will Be Watching
+** TODO Gone Home
+** TODO Guacamelee! Super Turbo Championship Edition
+:PROPERTIES:
+:ID:       421e2b61-bf2b-40b1-8b56-61d2421a9ea2
+:END:
+** TODO Hack 'n' Slash
+** TODO Hatoful Boyfriend: Holiday Star
+** TODO Hot Tin Roof: The Cat That Wore A Fedora
+:PROPERTIES:
+:ID:       b7d5aa01-e098-4e0f-be56-f89a475fa0f4
+:END:
+** TODO INSIDE
+:PROPERTIES:
+:ID:       75903aa9-767d-4ab7-a179-8d13e7d6383d
+:END:
+** TODO La-Mulana
+** TODO Little King's Story
+:PROPERTIES:
+:ID:       9f91f33f-12b5-4caa-b67b-04b7ab77f237
+:END:
+** TODO Lumino City
+** TODO MASSIVE CHALICE
+** TODO Mercenary Kings
+** TODO Mushroom 11
+:PROPERTIES:
+:ID:       c729d0d7-e687-4810-bbe3-49d178e5f11f
+:END:
+** TODO No Time to Explain
+** TODO NOT A HERO
+** TODO Not The Robots
+** TODO Offworld Trading Company
+** TODO Oil Rush
+** TODO Ori and the Blind Forest
+** TODO Phantom Breaker: Battle Grounds
+** TODO Prison Architect
+:PROPERTIES:
+:ID:       97a55fac-aa2f-462d-a056-53be6a3c2459
+:END:
+** TODO Raiden IV: OverKill
+** TODO Read Only Memories
+** TODO Recettear: An Item Shop's Tale
+** TODO Retro Game Crunch
+:PROPERTIES:
+:ID:       f9b1213a-3e63-40c8-b732-f3d40bafe330
+:END:
+** TODO Road to Ballhalla
+:PROPERTIES:
+:ID:       4de46677-f26d-4350-aab7-e972cbfef7ca
+:END:
+** TODO ROCKETSROCKETSROCKETS
+:PROPERTIES:
+:ID:       d10f501c-bcd2-4ce6-9249-1c4f4c5513de
+:END:
+** TODO ROD: Revolt Of Defense
+** TODO RONIN
+** TODO Shantae: Risky's Revenge - Director's Cut
+** TODO Song of the Deep
+:PROPERTIES:
+:ID:       49974eda-7219-4b9e-ac87-929cb67fe2ea
+:END:
+** TODO SpaceChem
+** TODO Sproggiwood
+:PROPERTIES:
+:ID:       ad33e79f-fd65-4db6-a0e5-2225bb2a0fa8
+:END:
+** TODO Super Splatters
+** TODO Superbrothers: Sword & Sworcery EP
+** TODO Tadpole Treble
+:PROPERTIES:
+:ID:       7f1ad6ac-7e25-43a9-a0d5-4de283f2157a
+:END:
+** TODO The Aquatic Adventure of the Last Human
+** TODO The Escapists
+:PROPERTIES:
+:ID:       fe6b35da-1563-4095-a653-9b55897a71cd
+:END:
+** TODO The Flame in the Flood
+:PROPERTIES:
+:ID:       ae94f5de-c1c7-4ad8-aa27-7f3fc181bb76
+:END:
+** TODO The Nightmare Cooperative
+** TODO The Silent Age
+:PROPERTIES:
+:ID:       58a20a6c-b53b-4607-b2de-ea8ee1c18070
+:END:
+** TODO The Talos Principle
+** TODO The Vanishing of Ethan Carter - Redux
+** TODO The Witness
+:PROPERTIES:
+:ID:       0ec8953c-2e16-4535-8ab2-6c69bf1c1be9
+:END:
+** TODO The Wolf Among Us
+** TODO This War of Mine
+** TODO Titan Souls
+** TODO Tower of Guns
+:PROPERTIES:
+:ID:       7e95ce18-8bf2-43ed-a329-cbb3dc00a354
+:END:
+** TODO Transistor
+** TODO Tropico 4
+** TODO Twilight Struggle
+:PROPERTIES:
+:ID:       da801629-78fc-467e-828b-3ad6454e14e9
+:END:
+** TODO Undertale
+:PROPERTIES:
+:ID:       f787d87d-ba40-49af-99df-f7b5e21c646c
+:END:
+** TODO Valiant Hearts: The Great War
+:PROPERTIES:
+:ID:       f989d39f-a51e-416e-8edd-5f506f28f2fc
+:END:
+** TODO Waking Mars
+:PROPERTIES:
+:ID:       9e30d23c-45b3-490e-b465-aa8b93850920
+:END:
+** TODO Westerado: Double Barreled
+:PROPERTIES:
+:ID:       06bf7a2f-3d70-4553-8544-19b4a75549c6
+:END:
+** TODO XCOM: Enemy Unknown
