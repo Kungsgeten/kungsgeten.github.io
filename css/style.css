@@ -52,11 +52,14 @@ h2.footnotes {
   padding: 0;
   margin: 0;
 }
-.todo {
-  color: #00f;
+.todo,
+.done {
   margin-right: 0.3em;
   border: 1px solid #b0b09a;
   padding: 2px;
+}
+.todo {
+  color: #00f;
 }
 .timestamp {
   color: #b0b09a;

@@ -19,6 +19,7 @@
 
 As of 2017-02-16 I have 409 games in [[http://steamcommunity.com/id/clerik/][my Steam account]], I haven't even started the majority of them. Using [[https://github.com/kungsgeten/steam.el][an organizational tool]] I've divided these games into several categories, one of them being /games to try/ containing 95 games alone. So /The Steaming Pile/ is my attempt to /play more, buy less/ and go through my backlog, providing my thoughts along the way.
 
+** DONE [[file:dungetris.html][Dungetris]] [2017-02-21 Tue]
 ** TODO A Bird Story
 ** TODO A Boy and His Blob
 ** TODO A Wizard's Lizard
@@ -61,10 +62,6 @@ As of 2017-02-16 I have 409 games in [[http://steamcommunity.com/id/clerik/][my 
 :END:
 ** TODO Dominions 4
 ** TODO Dropsy
-** TODO Dungetris
-:PROPERTIES:
-:ID:       4f45dc2b-fafc-4ff3-ab84-2ef24d781245
-:END:
 ** TODO Dust: An Elysian Tail
 ** TODO Dustforce
 ** TODO Dynamite Jack
