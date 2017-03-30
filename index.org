@@ -19,6 +19,7 @@
 
 As of 2017-02-16 I have 409 games in [[http://steamcommunity.com/id/clerik/][my Steam account]], I haven't even started the majority of them. Using [[https://github.com/kungsgeten/steam.el][an organizational tool]] I've divided these games into several categories, one of them being /games to try/ containing 95 games alone. So /The Steaming Pile/ is my attempt to /play more, buy less/ and go through my backlog, providing my thoughts along the way.
 
+** DONE [[file:monster_slayers.html][Monster Slayers]] [2017-03-30 Thu]
 ** DONE [[file:dungetris.html][Dungetris]] [2017-02-21 Tue]
 ** TODO A Bird Story
 ** TODO A Boy and His Blob
