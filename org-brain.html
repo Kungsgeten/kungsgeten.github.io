@@ -4,7 +4,7 @@
 <!-- 2017-04-02 Sun 18:13 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Archive</title>
+<title>org-brain</title>
 <meta name="generator" content="Org mode">
 <meta name="author" content="Erik Sjöstrand">
 <style type="text/css">
@@ -240,15 +240,95 @@ for the JavaScript code in this tag.
 </div>
 <div id="content">
 <header>
-<h1 class="title">Archive</h1>
-</header><ul class="org-ul">
-<li><a href="org-brain.html">2017-04-02 org-brain</a></li>
-<li><a href="monster_slayers.html">2017-03-30 Monster Slayers</a></li>
-<li><a href="dungetris.html">2017-02-21 Dungetris</a></li>
-<li><a href="ryo-modal.html">2016-10-07 RYO</a></li>
-<li><a href="yankpad13.html">2016-08-15 Yankpad 1.3</a></li>
-<li><a href="yankpad.html">2016-07-02 Yankpad</a></li>
-</ul>
+<h1 class="title">org-brain</h1>
+<p class="subtitle">Concept mapping using org-mode</p>
+</header><section>
+<p>
+<span class="underline">I&rsquo;ve tried using personal wikis</span> in the past, in the form of a <a href="http://tiddlywiki.com">TiddlyWiki</a>, but it felt weird to use a program separate from Emacs for that task. I kept some notes files in org-mode, used <a href="http://jblevins.org/projects/deft/">Deft</a> to sift through them etc. But I can&rsquo;t really say I felt confident about this system, it just seemed like a lot of information which I couldn&rsquo;t really keep track of and instead of consulting my reference material I usually searched for the information again.
+</p>
+
+<p>
+The idea of a <a href="https://en.wikipedia.org/wiki/Personal_wiki">personal wiki</a> is to use it as reference material when you learn something new<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, or to connect your thoughts: a way to unload your brain. I guess it has some similarities to a journal, but less focused on chronological order and personal experience?
+</p>
+</section>
+
+<section>
+<p>
+<span class="underline">Concept mapping</span> was unknown to me before I heard of a piece of software called <a href="http://thebrain.com">The Brain</a><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>, which was mentioned in <a href="https://www.reddit.com/r/emacs/comments/5h6weh/serious_knowledge_management_concept_networks/">this reddit post</a> on knowledge management in Emacs. A <a href="https://en.wikipedia.org/wiki/Concept_map">concept map</a> is similar to a <a href="https://en.wikipedia.org/wiki/Mind_map">mind map</a>, but doesn&rsquo;t focus on a central topic as much as a mind map usually does. Instead it is a way to connect different concepts with one another, and the same concept can be linked to from different concepts, creating a network of linked concepts. This is similar to a <a href="https://en.wikipedia.org/wiki/Wiki">wiki</a>, but in a visual form<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>.
+</p>
+
+<p>
+I find that a problem with mind maps is that they get cluttered fast; it can be hard to get an overview due to information overload. <i>The Brain</i> solves this beautifully by centering on a node (a <i>thought</i> in brain lingo) and only letting you see its parents, its siblings, its children and related nodes. I was intrigued by this piece of software, but as with TiddlyWiki I thought that it would be in line with my workflow if it was integrated with Emacs. So I started working on a project I call <a href="http://github.com/Kungsgeten/org-brain">org-brain</a>.
+</p>
+</section>
+
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3gwdXkIHxjA" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<section>
+<p>
+<span class="underline">org-brain</span> is pretty similar to The Brain, but has less features and a text based interface, it&rsquo;s Emacs, after all! It works by having a directory full of <code>org-mode</code> files, which are linked to one another using <code>brain:</code> links. I call these files <code>org-brain</code> entries. You can visualize and navigate the network of entries using <code>M-x org-brain-visualize</code>, and add new children/parents from there<sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>. Apart from children, parents and siblings, the concept map buffer also show headlines in the entry file, and external links. These external links are called <i>resources</i> in <code>org-brain</code> lingo, and is a way to connect webpages, files, etc to your entries. New resources can be added from the concept map buffer too; the idea being to quickly connect concepts and relevant information to those concepts.
+</p>
+
+<p>
+The <code>org-brain</code> project is pretty young, and my main concern is that it might be too slow when having a large ammount of entry files. <code>org-brain</code> doesn&rsquo;t use a database, instead it parses an entry file to find its children (<code>brain:</code> links to other entries). This is okay, as we only have to parse one file. The problem occurs when we want to find the parents of the entry. <code>org-mode</code> has no way to know which files links to the current one, so we have to parse every <code>org-brain</code> entry file and get every file that links to the current entry. So far I haven&rsquo;t noticed any speed problems, but time will tell. Perhaps I need to use a database in the future<sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>.
+</p>
+
+<p>
+You can install <code>org-brain</code> from <a href="https://melpa.org/#/org-brain">Melpa</a>, or clone/fork/download it on <a href="https://github.com/Kungsgeten/org-brain">GitHub</a>. I&rsquo;ve been enjoying using it so far, but we&rsquo;ll see if it will stick in the long run. Also I excuse the composition of <a href="https://www.youtube.com/watch?v=3gwdXkIHxjA&amp;feature=youtu.be">the screencast</a>, it could be a lot better (and shorter) but hopefully it gives you an idea of how <code>org-brain</code> operates!
+</p>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+You may call it knowledge management or information management.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://www.youtube.com/watch?v=GFqLUBKCFdA">This video</a> is a good introduction to The Brain and how it works.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+Imagine a mind map structure where each node holds a wiki article, and you could see how they connect. That&rsquo;s actually one of the features of the <a href="http://www.connectedtext.com/">ConnectedText</a> personal wiki software.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
+You may also choose to use it as a regular wiki and navigate via the <code>org-mode</code> buffers, but if you do that exclusively you probably want a more traditional wiki system, like <a href="https://github.com/caiorss/org-wiki">org-wiki</a>, <a href="https://github.com/benaiah/org-wikish">org-wikish</a>, or <a href="https://github.com/abo-abo/plain-org-wiki">plan-org-wiki</a>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5">5</a></sup> <div class="footpara"><p class="footpara">
+There are a couple of alternatives, the ones I&rsquo;m considering are <a href="https://github.com/nicferrier/emacs-db">emacs-db</a> and <a href="https://github.com/skeeto/emacsql">EmacsSQL</a>. What I probably have to do is adding entries to the database as soon as an <code>org-brain</code> files is saved, in order to keep the database up to date. Well, that&rsquo;s a problem for the future!
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+       */
+      /*
+      var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+
+          s.src = '//kungsgeten.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 </body>
 </html>

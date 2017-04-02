@@ -8,6 +8,7 @@
 :HTML_CONTAINER_CLASS: blogcategory
 :END:
 
+- [2017-04-02 Sun] [[file:org-brain.html][org-brain]] -- /Concept mapping using org-mode/
 - [2016-10-07 Fri] [[file:ryo-modal.html][_RYO_]] -- /Roll your own modal mode!/
 - [2016-08-15 Mon] [[file:yankpad13.html][Yankpad 1.3]] -- /Keywords and function calls/
 - [2016-07-03 Sun] [[file:yankpad.html][Yankpad]] -- /Text snippets using org-mode/
